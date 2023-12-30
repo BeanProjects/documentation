@@ -1,6 +1,6 @@
 
 1. beancli
-2. bean continuous gatsbyjs compile -> package -> publish -> deploy -> promote -> clean
+2. bean continuous gatsbyjs compile -> package -> publish -> deploy -> promote -> destroy (or clean?)
 3. bean update/version
 4. gitops:
     1. git push
