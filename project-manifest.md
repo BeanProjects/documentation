@@ -1,21 +1,24 @@
 
 1. beancli
-2. bean continuous gatsbyjs compile -> package -> publish -> deploy -> promote -> destroy (or clean?)
+2. bean continuous gatsbyjs/maven:lib unpack -> compile -> package -> publish -> deploy -> promote -> destroy (or clean?)
 3. bean update/version
 4. gitops:
     1. git push
     2. GitHubApp push to GitHubAppHook
     3. GHAHook create ArgoCDWorkflow
+    4. bean continuous gatsbyjs unpack
+        1. also includes resolve-dependencies and code generation 
     6. bean continuous gatsbyjs compile
     6. bean continuous gatsbyjs package
     6. bean continuous gatsbyjs publish
-    6. bean continuous gatsbyjs deploy to PREVIEW env
+    6. bean continuous gatsbyjs deploy to PREVIEW/DEV env
+    6. bean continuous gatsbyjs promote from DEV to PRE-POD/STG env or from PRE-PROD/STG to PROD env
 6. environments
     1. preview
-    2. dev
-    3. preprod
-    4. stg
-    5. prod w/wo canary
+    3. dev
+    4. preprod
+    5. stg
+    6. prod w/wo canary
 7. concepts
     1. Cloud, Project, Team, BoundedContext, App
     2. a Project must belong to one and only one Cloud
