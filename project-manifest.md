@@ -6,10 +6,11 @@
     1. git push
     2. GitHubApp push to GitHubAppHook
     3. GHAHook create ArgoCDWorkflow
-    4. bean continuous gatsbyjs unpack
-        1. also includes resolve-dependencies and code generation 
-    6. bean continuous gatsbyjs compile
-    6. bean continuous gatsbyjs package
+    5. bean continuous unpack app-name --framework gatsbyjs
+        1. also includes resolve-dependencies and code generation
+        2. `semver` string needs to be validated and reconciled
+    6. bean continuous compile app-name --framework gatsbyjs
+    6. bean continuous package app-name --framework gatsbyjs
         1. If `+semver:pre` string is supplied 
             1. from from SNAPSHOT to UAT.1 for maven:lib
             4. from UAT.1 to UAT.2 for maven:lib 
@@ -18,9 +19,9 @@
         2.  +semver:patch -> SNAPSHOT/UAT to RELEASE and bump patch
         3.  If no semver supplied
             1. must be SNAPSHOT pre-release
-    6. bean continuous gatsbyjs publish
-    6. bean continuous gatsbyjs deploy to PREVIEW/DEV env
-    6. bean continuous gatsbyjs promote
+    6. bean continuous publish app-name --framework gatsbyjs
+    6. bean continuous deploy app-name --framework gatsbyjs to PREVIEW/DEV env
+    6. bean continuous promote app-name --framework gatsbyjs
         1. from DEV to PRE-POD/STG env 
         2. from PRE-PROD/STG to PROD env
 
