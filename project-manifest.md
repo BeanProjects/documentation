@@ -10,15 +10,20 @@
         1. also includes resolve-dependencies and code generation 
     6. bean continuous gatsbyjs compile
     6. bean continuous gatsbyjs package
+        1. If `+semver:pre` string is supplied 
+            1. from from SNAPSHOT to UAT.1 for maven:lib
+            4. from UAT.1 to UAT.2 for maven:lib 
+        1.  +semver:major -> SNAPSHOT/UAT to RELEASE and bump major
+        2.  +semver:minor -> SNAPSHOT/UAT to RELEASE and bump minor
+        2.  +semver:patch -> SNAPSHOT/UAT to RELEASE and bump patch
+        3.  If no semver supplied
+            1. must be SNAPSHOT pre-release
     6. bean continuous gatsbyjs publish
     6. bean continuous gatsbyjs deploy to PREVIEW/DEV env
     6. bean continuous gatsbyjs promote
         1. from DEV to PRE-POD/STG env 
         2. from PRE-PROD/STG to PROD env
-        3. from from SNAPSHOT to RELEASE for maven:lib and `semver` string needs to be supplied
-            1.  +semver:major
-            2.  +semver:minor
-            3.  +semver:patch
+
 6. environments
     1. preview
     3. dev
