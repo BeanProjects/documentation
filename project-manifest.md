@@ -12,7 +12,13 @@
     6. bean continuous gatsbyjs package
     6. bean continuous gatsbyjs publish
     6. bean continuous gatsbyjs deploy to PREVIEW/DEV env
-    6. bean continuous gatsbyjs promote from DEV to PRE-POD/STG env or from PRE-PROD/STG to PROD env
+    6. bean continuous gatsbyjs promote
+        1. from DEV to PRE-POD/STG env 
+        2. from PRE-PROD/STG to PROD env
+        3. from from SNAPSHOT to RELEASE for maven:lib and `semver` string needs to be supplied
+            1.  +semver:major
+            2.  +semver:minor
+            3.  +semver:patch
 6. environments
     1. preview
     3. dev
