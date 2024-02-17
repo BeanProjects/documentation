@@ -31,15 +31,22 @@
     4. preprod
     5. stg
     6. prod w/wo canary
-7. concepts
+
+7. Concepts
     1. Cloud, Project, Team, BoundedContext, App
-    2. a Project must belong to one and only one Cloud
-    3. a Cloud may or may not belong to another Cloud
-    4. a Project has BoundedContexts each of which has Apps and is owned by a Team
-    5. a Team is managed by a Project
-    6. the UserAccount for each Team Member is managed by the Cloud
-    7. one cluster for each project one of which is BeanContinuous
-    8. each k8s namespace is a BoundedContext
+        1. Infra
+            1. K8s cluster > k8s namespace
+            2. AWS Account
+            3. VPC
+        2. Project, Team, BC, App
+            1. Project: cluster config, team members, context map, apps
+    3. a Project must belong to one and only one Cloud
+    4. a Cloud may or may not belong to another Cloud
+    5. a Project has BoundedContexts each of which has Apps and is owned by a Team
+    6. a Team is managed by a Project
+    7. the UserAccount for each Team Member is managed by the Cloud
+    8. one cluster for each project one of which is BeanContinuous
+    9. each k8s namespace is a BoundedContext
 
 ### Difference Between Staging and Pre-Production Environments
 Staging environments and pre-production environments are often used interchangeably, but they have subtle differences. While staging environments closely resemble the production environment, they are primarily used for final user acceptance testing (UAT) before the software is deployed. On the other hand, pre-production environments focus on comprehensive testing and fine-tuning of the software, including performance testing, load testing, and stress testing.
