@@ -53,6 +53,13 @@ Staging environments and pre-production environments are often used interchangea
 
 
 ### The subdomains of a Platform as a service (PaaS) cloud provider can vary depending on the specific provider and its offerings. However, some common subdomains include:
+Cross-cutting concerns:
+1. Security
+    1. ZeroTrust
+    2. Auth
+2. SEO
+3. Scalability
+4. Logging and Metrics exposing
 
 Compute:
 
@@ -80,6 +87,7 @@ Management:
 Monitoring and logging: Tracks application and infrastructure performance.
 Identity and access management (IAM): Controls access to resources.
 Automation tools: Simplifies infrastructure and application management.
+Feature flag: ok ?
 
 
 Other:
